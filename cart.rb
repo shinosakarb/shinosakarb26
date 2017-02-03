@@ -7,14 +7,7 @@ class Cart
     @item_list << item
   end
 
-
   def fee
-    sum = 0
-
-    @item_list.each do |item|
-      sum += item.price
-    end
-
-    sum
+    @item_list.inject(0){|sum, item| sum + item.price }
   end
 end
