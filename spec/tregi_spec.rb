@@ -3,7 +3,7 @@ require File.expand_path('../lib/tregi', '__FILE__')
 describe TRegi do
   describe '商品1つをカゴに入れて購入' do
     before{
-      @item = TRegi::Item.new('財布', 10_000)
+      @item = TRegi::Item.new({name: '財布', price: 10_000})
       @cart = TRegi::Cart.new
       @cart.add(@item)
       @register = TRegi::Register.new(@cart)
@@ -27,8 +27,8 @@ describe TRegi do
 
   describe '値段の違う商品2つを購入' do
     before{
-      item1 = TRegi::Item.new('財布', 10_000)
-      item2 = TRegi::Item.new('時計', 5_000)
+      item1 = TRegi::Item.new({name: '財布', price: 10_000})
+      item2 = TRegi::Item.new({name: '時計', price: 5_000})
       @cart = TRegi::Cart.new
       @cart.add(item1)
       @cart.add(item2)
