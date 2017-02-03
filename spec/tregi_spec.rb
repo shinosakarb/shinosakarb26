@@ -1,4 +1,6 @@
 require File.expand_path('../tregi', '__FILE__')
+require File.expand_path('../item', '__FILE__')
+require File.expand_path('../cart', '__FILE__')
 
 describe TRegi do
   it '商品1つをカゴにいれて購入' do
