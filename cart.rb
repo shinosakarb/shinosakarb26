@@ -7,6 +7,7 @@ class Cart
     @item_list << item
   end
 
+
   def fee
     sum = 0
 
@@ -15,9 +16,5 @@ class Cart
     end
 
     sum
-  end
-
-  def purchase
-    true
   end
 end
