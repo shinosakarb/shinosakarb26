@@ -1,4 +1,6 @@
 class Register
+  attr_reader :surplus
+
   def initialize(cart)
     @cart = cart
   end
@@ -8,6 +10,7 @@ class Register
   end
 
   def purchase(fee)
-    self.fee <= fee
+    @surplus = fee - self.fee
+    0 <= @surplus
   end
 end
