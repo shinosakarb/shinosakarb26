@@ -7,7 +7,7 @@ class Register
     @cart.fee
   end
 
-  def purchase
-    true
+  def purchase(fee)
+    self.fee <= fee
   end
 end
