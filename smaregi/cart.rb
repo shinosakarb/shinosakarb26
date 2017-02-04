@@ -22,7 +22,7 @@ class Cart
   end
 
   def total_product_quantity
-    return @products.size
+    @products.size
   end
 
 end

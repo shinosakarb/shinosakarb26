@@ -6,9 +6,9 @@ class Register
     total_products_amount_message = "The total is #{total}.\n"
 
     if enough_money?(cart, money)
-      return total_products_amount_message + "Thank you!"
+      total_products_amount_message + "Thank you!"
     else
-      return total_products_amount_message + "You don't hve enough money."
+      total_products_amount_message + "You don't hve enough money."
     end
   end
 
@@ -22,6 +22,6 @@ class Register
     cart.products.each do |prod|
       total += prod.price
     end
-    return total
+    total
   end
 end
