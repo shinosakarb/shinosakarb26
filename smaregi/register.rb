@@ -8,7 +8,7 @@ class Register
     if enough_money?(cart, money)
       total_products_amount_message + "Thank you!"
     else
-      total_products_amount_message + "You don't hve enough money."
+      total_products_amount_message + "You don't have enough money."
     end
   end
 
