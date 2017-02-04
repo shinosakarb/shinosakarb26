@@ -8,7 +8,9 @@ describe TRegi do
     cart = Cart.new
     cart.add(item)
 
-    expect(cart.fee).to eq 10_000
-    expect(cart.purchase).to be_truthy
+    register = Register.new(cart)
+
+    expect(register.fee).to eq 10_000
+    expect(regiter.purchase).to be_truthy
   end
 end
