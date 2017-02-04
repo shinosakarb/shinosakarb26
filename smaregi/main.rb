@@ -15,7 +15,4 @@ cart.add book
 
 cart.add bookmark
 
-p cart.product_quantity? bookmark
-p cart.total_product_quantity?
-
-regi.checkout cart, 51
+regi.checkout cart, 3200

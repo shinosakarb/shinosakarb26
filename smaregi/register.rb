@@ -6,7 +6,11 @@ class Register
       total += prod.price
     end
 
-    if money >= total
+    puts "The total is #{total}."
+
+    if money > total
+      puts "Thank you! Your change is #{money - total}"
+    elsif money == total
       puts "Thank you!"
     else
       puts "Stop, please put the items down and leave."
