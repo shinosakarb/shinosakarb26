@@ -1,9 +1,11 @@
-class Item
-  attr_accessor :name
-  attr_accessor :price
+module TRegi
+  class Item
+    attr_accessor :name
+    attr_accessor :price
 
-  def initialize(name, price)
-    @name = name
-    @price = price
+    def initialize(name, price)
+      @name = name
+      @price = price
+    end
   end
 end

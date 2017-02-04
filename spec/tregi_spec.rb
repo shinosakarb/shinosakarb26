@@ -2,10 +2,10 @@ require File.expand_path('../lib/tregi', '__FILE__')
 
 describe TRegi do
   before{
-    @item = Item.new('財布', 10_000)
-    @cart = Cart.new
+    @item = TRegi::Item.new('財布', 10_000)
+    @cart = TRegi::Cart.new
     @cart.add(@item)
-    @register = Register.new(@cart)
+    @register = TRegi::Register.new(@cart)
   }
 
   it '商品1つをカゴにいれて丁度の金額で購入' do

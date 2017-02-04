@@ -1,4 +1,6 @@
-class Order
-  item
-  amount
+module TRegi
+  class Order
+    item
+    amount
+  end
 end
