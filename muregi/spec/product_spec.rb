@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Product do
-  let(:product) { Product.new(name: 'sample', price: 1_000) }
+describe Muregi::Product do
+  let(:product) { Muregi::Product.new(name: 'sample', price: 1_000) }
 
   example do
     expect(product.name).to eq 'sample'

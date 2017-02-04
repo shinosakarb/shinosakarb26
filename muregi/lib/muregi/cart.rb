@@ -1,11 +1,13 @@
-class Cart
-  attr_reader :product_list
+module Muregi
+  class Cart
+    attr_reader :product_list
 
-  def initialize
-    @product_list = []
-  end
+    def initialize
+      @product_list = []
+    end
 
-  def add(product)
-    @product_list.push product
+    def add(product)
+      @product_list.push product
+    end
   end
 end

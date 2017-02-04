@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Cart do
-  let(:product1) { Product.new(name: 'sample', price: 100) }
-  let(:cart) { Cart.new }
+describe Muregi::Cart do
+  let(:product1) { Muregi::Product.new(name: 'sample', price: 100) }
+  let(:cart) { Muregi::Cart.new }
 
   describe 'add' do
     example do
