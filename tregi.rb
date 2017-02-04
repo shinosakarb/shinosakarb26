@@ -1,2 +1,0 @@
-module TRegi
-end
