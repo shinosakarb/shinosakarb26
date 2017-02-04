@@ -7,7 +7,7 @@ describe 'Register' do
     context 'when amount are enough' do
       it 'ok' do
         cart = Cart.new
-        book = Product.new('book', 1200)
+        book = Product.new({name: 'book', price: 1200})
         cart.add(book)
         regi = Register.new
         money = 3000
@@ -20,7 +20,7 @@ describe 'Register' do
     context 'when amount are not enough' do
       it 'ng' do
         cart = Cart.new
-        book = Product.new('book', 1200)
+        book = Product.new({name: 'book', price: 1200})
         cart.add(book)
         regi = Register.new
         money = 0
@@ -34,7 +34,7 @@ describe 'Register' do
   describe '#enough_money?' do
     it 'should return true' do
         cart = Cart.new
-        book = Product.new('book', 1200)
+        book = Product.new({name: 'book', price: 1200})
         cart.add(book)
         regi = Register.new
         expect(regi.enough_money?(cart, 1201)).to eq(true)
@@ -43,7 +43,7 @@ describe 'Register' do
 
     it 'should return true' do
         cart = Cart.new
-        book = Product.new('book', 1200)
+        book = Product.new({name: 'book', price: 1200})
         cart.add(book)
         regi = Register.new
         expect(regi.enough_money?(cart, 0)).to eq(false)
@@ -53,7 +53,7 @@ describe 'Register' do
   describe '#total_price' do
     it 'should return 2400' do
         cart = Cart.new
-        book = Product.new('book', 1200)
+        book = Product.new({name: 'book', price: 1200})
         cart.add(book)
         cart.add(book)
 
