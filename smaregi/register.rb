@@ -19,8 +19,8 @@ class Register
 
   def total_price(cart)
     total = 0
-    cart.products.each do |prod|
-      total += prod.price
+    cart.products.each do |product|
+      total += product.price
     end
     total
   end
