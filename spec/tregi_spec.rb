@@ -1,4 +1,4 @@
-require File.expand_path('../../tregi', '__FILE__')
+require File.expand_path('../tregi', '__FILE__')
 
-describe Tregi do
+describe TRegi do
 end
