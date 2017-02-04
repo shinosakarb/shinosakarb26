@@ -14,7 +14,7 @@ class Cart
     @products.delete_at(@products.index(product))
   end
 
-  def product_quantity?(product)
+  def product_quantity(product)
     new_list = @products.select do |prod|
       prod unless prod != product
     end
@@ -23,7 +23,7 @@ class Cart
 
   def total_product_quantity?
     new_list = @products.each do |prod|
-      product_quantity? prod
+      product_quantity prod
     end
     new_list.size
   end
