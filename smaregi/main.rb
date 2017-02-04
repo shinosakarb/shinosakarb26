@@ -2,6 +2,7 @@ require './cart'
 require './product'
 require './register'
 
+regi = Register.new
 cart = Cart.new
 
 book = Product.new("book", 200)
@@ -16,3 +17,5 @@ cart.add bookmark
 
 p cart.product_quantity? bookmark
 p cart.total_product_quantity?
+
+regi.checkout cart, 51
