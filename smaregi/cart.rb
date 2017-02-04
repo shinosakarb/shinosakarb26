@@ -12,7 +12,7 @@ class Cart
   end
 
   def remove(product)
-    @product_list.delete_first(product)
+    @product_list.delete_at(@product_list.index(product))
   end
 
   def product_quantity?(product)
