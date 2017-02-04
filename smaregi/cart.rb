@@ -1,10 +1,9 @@
 class Cart
 
-  attr_accessor :products, :product_quantity
+  attr_accessor :products
 
   def initialize
     @products = Array.new
-    @product_quantity = 0
   end
 
   def add(product)
