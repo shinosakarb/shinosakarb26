@@ -1,29 +1,29 @@
 class Cart
 
-  attr_accessor :product_list, :product_quantity
+  attr_accessor :products, :product_quantity
 
   def initialize
-    @product_list = Array.new
+    @products = Array.new
     @product_quantity = 0
   end
 
   def add(product)
-    @product_list << product
+    @products << product
   end
 
   def remove(product)
-    @product_list.delete_at(@product_list.index(product))
+    @products.delete_at(@products.index(product))
   end
 
   def product_quantity?(product)
-    new_list = @product_list.select do |prod|
+    new_list = @products.select do |prod|
       prod unless prod != product
     end
     new_list.size
   end
 
   def total_product_quantity?
-    new_list = @product_list.each do |prod|
+    new_list = @products.each do |prod|
       product_quantity? prod
     end
     new_list.size
