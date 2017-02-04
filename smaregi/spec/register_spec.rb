@@ -24,7 +24,7 @@ describe 'Register' do
         cart.add(book)
         regi = Register.new
         money = 0
-        expect_result_message = "The total is 1200.\nYou don't hve enough money."
+        expect_result_message = "The total is 1200.\nYou don't have enough money."
         expect(regi.checkout(cart, money)).to eq(expect_result_message)
 
       end
