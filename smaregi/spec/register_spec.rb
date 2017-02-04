@@ -31,6 +31,25 @@ describe 'Register' do
     end
   end
 
+  describe '#enough_money?' do
+    it 'should return true' do
+        cart = Cart.new
+        book = Product.new('book', 1200)
+        cart.add(book)
+        regi = Register.new
+        expect(regi.enough_money?(cart, 1201)).to eq(true)
+        expect(regi.enough_money?(cart, 1200)).to eq(true)
+    end
+
+    it 'should return true' do
+        cart = Cart.new
+        book = Product.new('book', 1200)
+        cart.add(book)
+        regi = Register.new
+        expect(regi.enough_money?(cart, 0)).to eq(false)
+    end
+  end
+
   describe '#total_price' do
     it 'should return 2400' do
         cart = Cart.new

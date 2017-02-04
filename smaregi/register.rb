@@ -5,10 +5,19 @@ class Register
 
     total_products_amount_message = "The total is #{total}.\n"
 
-    if money > total
+    if enough_money?(cart, money)
       return total_products_amount_message + "Thank you!"
     else
       return total_products_amount_message + "You don't hve enough money."
+    end
+  end
+
+  def enough_money?(cart, money)
+    total = total_price(cart)
+    if money >= total
+      return true
+    else
+      return false
     end
   end
 
