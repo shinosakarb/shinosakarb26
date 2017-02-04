@@ -22,10 +22,7 @@ class Cart
   end
 
   def total_product_quantity
-    new_list = @products.each do |prod|
-      product_quantity prod
-    end
-    new_list.size
+    return @products.size
   end
 
 end
