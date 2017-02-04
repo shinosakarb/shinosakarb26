@@ -1,10 +1,7 @@
 class Register
 
   def checkout cart, money
-    total = 0
-    cart.products.each do |prod|
-      total += prod.price
-    end
+    total = total_price(cart)
 
     total_products_amount_message = "The total is #{total}.\n"
 
@@ -15,4 +12,11 @@ class Register
     end
   end
 
+  def total_price(cart)
+    total = 0
+    cart.products.each do |prod|
+      total += prod.price
+    end
+    return total
+  end
 end

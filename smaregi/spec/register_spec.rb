@@ -30,5 +30,16 @@ describe 'Register' do
       end
     end
   end
-end
 
+  describe '#total_price' do
+    it 'should return 2400' do
+        cart = Cart.new
+        book = Product.new('book', 1200)
+        cart.add(book)
+        cart.add(book)
+
+        regi = Register.new
+        expect(regi.total_price(cart)).to eq(2400)
+    end
+  end
+end
