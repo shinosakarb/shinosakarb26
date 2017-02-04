@@ -15,4 +15,5 @@ cart.add book
 
 cart.add bookmark
 
-regi.checkout cart, 3200
+checkout_result = regi.checkout cart, 3200
+puts checkout_result

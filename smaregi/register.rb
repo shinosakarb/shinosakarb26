@@ -6,14 +6,12 @@ class Register
       total += prod.price
     end
 
-    puts "The total is #{total}."
+    total_product_list_amount_message = "The total is #{total}.\n"
 
     if money > total
-      puts "Thank you! Your change is #{money - total}"
-    elsif money == total
-      puts "Thank you!"
+      return total_product_list_amount_message + "Thank you!"
     else
-      puts "Stop, please put the items down and leave."
+      return total_product_list_amount_message + "You don't hve enough money."
     end
   end
 
