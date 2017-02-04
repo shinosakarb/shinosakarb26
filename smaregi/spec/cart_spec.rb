@@ -13,6 +13,18 @@ describe 'Cart' do
     end
   end
 
-  describe '#delete' do
+  describe '#remove' do
+    context 'when remove a book to the cart' do
+      it 'shoud increase product_list size by 1' do
+        cart = Cart.new
+        book_a = Product.new('book_a', 1200)
+        book_b = Product.new('book_b', 1350)
+        cart.add(book_a)
+        cart.add(book_a)
+        cart.add(book_b)
+        cart.remove(book_a)
+        expect(cart.product_list.size).to eq(2)
+      end
+    end
   end
 end
