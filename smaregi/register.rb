@@ -14,11 +14,7 @@ class Register
 
   def enough_money?(cart, money)
     total = total_price(cart)
-    if money >= total
-      return true
-    else
-      return false
-    end
+    money >= total
   end
 
   def total_price(cart)
