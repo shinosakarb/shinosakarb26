@@ -40,7 +40,7 @@ describe 'Cart' do
     end
   end
 
-  describe '#total_product_quantity?' do
+  describe '#total_product_quantity' do
     it 'should to return 3' do
       cart = Cart.new
       book_a = Product.new('book_a', 1200)
@@ -48,7 +48,7 @@ describe 'Cart' do
       cart.add(book_a)
       cart.add(book_b)
       cart.add(book_b)
-      expect(cart.total_product_quantity?()).to eq(3)
+      expect(cart.total_product_quantity()).to eq(3)
     end
   end
 end

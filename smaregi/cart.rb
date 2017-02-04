@@ -21,7 +21,7 @@ class Cart
     new_list.size
   end
 
-  def total_product_quantity?
+  def total_product_quantity
     new_list = @products.each do |prod|
       product_quantity prod
     end
