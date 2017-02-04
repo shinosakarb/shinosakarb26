@@ -27,4 +27,16 @@ describe 'Cart' do
       end
     end
   end
+
+  describe '#product_quantity?' do
+    it 'should to return 1' do
+      cart = Cart.new
+      book_a = Product.new('book_a', 1200)
+      book_b = Product.new('book_b', 1350)
+      cart.add(book_a)
+      cart.add(book_b)
+      cart.add(book_b)
+      expect(cart.product_quantity?(book_a)).to eq(1)
+    end
+  end
 end
