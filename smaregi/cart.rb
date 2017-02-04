@@ -3,7 +3,7 @@ class Cart
   attr_accessor :products
 
   def initialize
-    @products = Array.new
+    @products = []
   end
 
   def add(product)
