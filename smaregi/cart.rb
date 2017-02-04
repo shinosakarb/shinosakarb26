@@ -15,10 +15,10 @@ class Cart
   end
 
   def product_quantity(product)
-    new_list = @products.select do |prod|
-      prod unless prod != product
+    selected_products = @products.select do |current_product|
+      current_product unless current_product != product
     end
-    new_list.size
+    selected_products.size
   end
 
   def total_product_quantity
