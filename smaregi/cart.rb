@@ -4,7 +4,7 @@ class Cart
 
   def initialize
     @product_list = Array.new
-    @product_amount = 0
+    @product_quantity = 0
   end
 
   def add(product)
