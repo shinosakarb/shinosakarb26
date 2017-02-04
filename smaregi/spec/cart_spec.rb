@@ -6,7 +6,7 @@ describe 'Cart' do
     context 'when add a book to the cart' do
       it 'shoud increase product_list size by 1' do
         cart = Cart.new
-        book = Product.new('book')
+        book = Product.new('book', 1200)
         cart.add(book)
         expect(cart.product_list.size).to eq(1)
       end
